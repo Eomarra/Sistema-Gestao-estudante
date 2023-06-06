@@ -17,7 +17,18 @@ namespace Sistema_Gestão_estudantes
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            // Application.Run(new Login.Form());
             Application.Run(new Login_Form());
+            Login_Form telaDeLogin = new Login_Form();
+            
+            if (telaDeLogin.ShowDialog() == DialogResult.OK) 
+            {
+                Application.Run(new FormPrincipal());
+            }
+            else 
+            {
+                Application.Exit();
+            }
         }
     }
-}
+}                                         

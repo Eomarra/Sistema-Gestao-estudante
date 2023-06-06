@@ -46,7 +46,7 @@ namespace Sistema_Gestão_estudantes
 
             if (tabela.Rows.Count > 0)
             {
-                MessageBox.Show("SIM");
+               this.DialogResult= DialogResult.OK;
             }
             {
                 MessageBox.Show("Usúario ou senha incorretos, erro de login.");
