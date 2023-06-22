@@ -48,8 +48,10 @@ namespace Sistema_Gestão_estudantes
             {
                this.DialogResult= DialogResult.OK;
             }
+            else
             {
-                MessageBox.Show("Usúario ou senha incorretos, erro de login.");
+                MessageBox.Show("Usúario ou senha incorretos", "Erro de login.",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
