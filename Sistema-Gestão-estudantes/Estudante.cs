@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -42,6 +43,23 @@ namespace Sistema_Gestão_estudantes
             }
 
         }
+
+        internal bool InserirEstudante(string nome, string sobrenome, string telefone, string genero, string endereco, MemoryStream foto)
+        {
+            throw new NotImplementedException();
+        }
+        public DataTable getEstudante(MySqlCommand comando)
+        {
+            comando.Connection = bancoDeDados.getConexao;
+            MySqlDataAdapter adaptador = new MySqlDataAdapter(comando);
+            DataTable tabela = new DataTable();
+            adaptador.Fill(tabela); 
+
+
+            return tabela;
+        }
+    
+        
 
     }
 }   

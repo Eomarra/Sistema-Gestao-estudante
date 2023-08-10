@@ -62,6 +62,12 @@
     <Compile Include="FormAdicional.Designer.cs">
       <DependentUpon>FormAdicional.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaEstudante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaEstudante.Designer.cs">
+      <DependentUpon>ListaEstudante.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormInserirEstudante.resx">
       <DependentUpon>FormInserirEstudante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaEstudante.resx">
+      <DependentUpon>ListaEstudante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login_Form.resx">
       <DependentUpon>Login_Form.cs</DependentUpon>

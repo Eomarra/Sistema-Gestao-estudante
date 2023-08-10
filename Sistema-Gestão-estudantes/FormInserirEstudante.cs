@@ -65,15 +65,27 @@ namespace Sistema_Gestão_estudantes
             else if (Verificar())
             {
                 pictureBox.Image.Save(foto, pictureBox.Image.RawFormat);
-
-                if (estudante.InserirEstudante(nome, sobrenome, telefone, anoDeNascimento, genero, endereco, foto))
+                if (estudante.InserirEstudante(nome, sobrenome,
+                    telefone, genero, endereco, foto))
                 {
-                    MessageBox.Show("Novo Estudante cadastrado", "sucesso");
-                        MessageBoxButtons.OK, MessageBoxButtons.Information)
+                    MessageBox.Show("Novo Estudante Cadastrado", "Sucesso!",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro", "Inserir Estudante", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+               
+           
 
-                
-               }
             }
+             else
+                {
+                    MessageBox.Show("Campo Não Preenchido", "Inserir Estudante",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
+
+
             bool Verificar()
             {
                 if ((textBoxnome.Text.Trim() == "") ||
@@ -94,4 +106,5 @@ namespace Sistema_Gestão_estudantes
         }
     }
 }
+
 
