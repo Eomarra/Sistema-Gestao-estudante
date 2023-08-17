@@ -30,7 +30,11 @@ namespace Sistema_Gestão_estudantes
 
         private void listarEstudantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form ListaEstudante = ListaEstudante = new Form ListaEstudante 
+            ListaEstudante listaDeEstudantes = new ListaEstudante();
+
+
+            
+
         }
     }
 }

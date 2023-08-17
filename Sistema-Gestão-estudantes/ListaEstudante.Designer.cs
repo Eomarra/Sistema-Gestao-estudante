@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewLista = new System.Windows.Forms.DataGridView();
             this.btnAtualizar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLista)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridViewLista
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(802, 337);
-            this.dataGridView1.TabIndex = 0;
+            this.dataGridViewLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLista.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewLista.Name = "dataGridViewLista";
+            this.dataGridViewLista.Size = new System.Drawing.Size(802, 337);
+            this.dataGridViewLista.TabIndex = 0;
             // 
             // btnAtualizar
             // 
@@ -49,6 +50,7 @@
             this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "ATUALIZAR";
             this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
             // ListaEstudante
             // 
@@ -56,18 +58,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnAtualizar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewLista);
             this.Name = "ListaEstudante";
             this.Text = "ListaEstudante";
             this.Load += new System.EventHandler(this.ListaEstudante_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLista)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewLista;
         private System.Windows.Forms.Button btnAtualizar;
     }
 }

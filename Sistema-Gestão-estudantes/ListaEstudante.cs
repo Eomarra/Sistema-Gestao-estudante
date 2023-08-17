@@ -17,12 +17,23 @@ namespace Sistema_Gestão_estudantes
         {
             InitializeComponent();
         }
-
+        Estudante estudante = new Estudante();
         private void ListaEstudante_Load(object sender, EventArgs e)
         {
-            MySqlCommand comando = new MySqlCommand ("SElECT + FROM ´estudantes'");
-            dataGridView1.ReadOnly = true;
+            MySqlCommand comando = new MySqlCommand("SElECT + FROM ´estudantes'");
+            dataGridViewLista.ReadOnly = true;
             DataGridViewImageColumn colunaDeFotos = new DataGridViewImageColumn();
+            dataGridViewLista.RowTemplate.Height = 80;
+            dataGridViewLista.DataSource = Estudante.getEstudantes(comando);
+            colunaDeFotos = (DataGridViewImageColumn)dataGridViewLista.Columns[7];
+            colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
+            dataGridViewLista.AllowUserToAddRows = false;
+    }
+
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
+
