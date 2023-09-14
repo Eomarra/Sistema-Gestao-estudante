@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Sistema_Gestão_estudantes
 {
@@ -37,19 +38,19 @@ namespace Sistema_Gestão_estudantes
         private void btncadastrar_Click(object sender, EventArgs e)
         {
             Estudante estudante = new Estudante();
+           // int id = Convert.ToInt32(textBoxid.Text);
             string nome = textBoxnome.Text;
             string sobrenome = textBoxsobrenome.Text;
             string telefone = textBoxtelefone.Text;
             string endereco = textboxendereco.Text;
+            DateTime nascimento = dateTimePickernascimento.Value;
             string genero = "Feminino";
+            MemoryStream foto = new MemoryStream();
 
             if (radioButtonmasculino.Checked)
             {
                 genero = "Masculino";
             }
-
-
-            MemoryStream foto = new MemoryStream();
 
             int anoDeNascimento = dateTimePickernascimento.Value.Year;
 
@@ -65,7 +66,7 @@ namespace Sistema_Gestão_estudantes
             else if (Verificar())
             {
                 pictureBox.Image.Save(foto, pictureBox.Image.RawFormat);
-                if (estudante.InserirEstudante(nome, sobrenome,
+                if (estudante.InserirEstudante(nome, sobrenome, nascimento,
                     telefone, genero, endereco, foto))
                 {
                     MessageBox.Show("Novo Estudante Cadastrado", "Sucesso!",

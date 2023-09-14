@@ -31,6 +31,7 @@ namespace Sistema_Gestão_estudantes
         private void listarEstudantesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ListaEstudante listaDeEstudantes = new ListaEstudante();
+            listaDeEstudantes.Show(this);
 
 
             

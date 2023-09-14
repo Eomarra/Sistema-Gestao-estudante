@@ -20,11 +20,11 @@ namespace Sistema_Gestão_estudantes
         Estudante estudante = new Estudante();
         private void ListaEstudante_Load(object sender, EventArgs e)
         {
-            MySqlCommand comando = new MySqlCommand("SElECT + FROM ´estudantes'");
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM ´estudantes´");
             dataGridViewLista.ReadOnly = true;
             DataGridViewImageColumn colunaDeFotos = new DataGridViewImageColumn();
             dataGridViewLista.RowTemplate.Height = 80;
-            dataGridViewLista.DataSource = Estudante.getEstudantes(comando);
+            dataGridViewLista.DataSource = estudante.pegarEstudantes(comando);
             colunaDeFotos = (DataGridViewImageColumn)dataGridViewLista.Columns[7];
             colunaDeFotos.ImageLayout = DataGridViewImageCellLayout.Stretch;
             dataGridViewLista.AllowUserToAddRows = false;
